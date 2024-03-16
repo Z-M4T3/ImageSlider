@@ -1,0 +1,74 @@
+:root {
+    --bgColor: #000;
+    --txtColor: #fff;
+
+    --buttonBg: #0000009f;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+
+    background-color: var(--bgColor);
+    color: var(--txtColor);
+
+    font-family: 'Courier New', Courier, monospace;
+    overflow: hidden;
+}
+
+.slider {
+    position: relative;
+    width: 100dvw;
+    height: 100dvh;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: auto;
+}
+
+.slider img {
+    display: none;
+    width: 100%;
+}
+
+img.displaySlide {
+    display: block;
+    animation: fade 1.5s;
+}
+
+.slider button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 10px 15px;
+
+    font-size: 1.5rem;
+    font-weight: bold;
+
+    background-color: var(--buttonBg);
+    color: var(--txtColor);
+    border: none;
+    border-radius: 20px;
+
+    cursor: pointer;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+@keyframes fade {
+    from {
+        opacity: .5;
+    }
+    to {
+        opacity: 1;
+    }
+}
